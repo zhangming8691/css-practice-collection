@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fixed</title>
+    <style type="text/css">
+      /*
+        1. 永远相对于浏览器视口定位
+        2. 完全脱离文档流，不再占据原来位置，该空间消失
+        3. 父元素的浮动不会影响本元素的固定定位
+        4. 块元素 display 属性不变，表现为 inline-block
+        5. 内联元素也支持相对定位，display 转换为 block，表现为 inline-block
+       */
+
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .left{
+        width: 300px;
+        height: 200px;
+        background-color: #FB8C00;
+      }
+      .middle{
+        position: fixed;
+        left: 400px;
+        top: 40px;
+        /* float: left; */
+        width: 400px;
+        height: 200px;
+        background-color: #F57C00;
+      }
+      .middle-inner-wrapper {
+        /* position: fixed;
+        left: 400px;
+        top: 40px; */
+        float: left;
+        width: 300px;
+        height: 150px;
+        background-color: #9E9D24;
+      }
+      .middle-inner{
+        width: 150px;
+        height: 100px;
+        background-color: #00BCD4;
+      }
+      .test-text{
+        /* position: absolute;
+        left: 40px;
+        top: 40px; */
+      }
+      .right{
+        width: 500px;
+        height: 200px;
+        background-color: #EF6C00;
+      }
+      .last{
+        width: 600px;
+        height: 200px;
+        background-color: #E65100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left">Left</div>
+      <div class="middle">
+        <div class="middle-inner-wrapper">
+          <div class="middle-inner">Middle-inner</div>
+          <span class="test-text">测试文字</span>
+        </div>
+      </div>
+      <div class="right">Right</div>
+      <div class="last">Last</div>
+    </div>
+  </body>
+</html>

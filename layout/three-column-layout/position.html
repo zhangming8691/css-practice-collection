@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>定位版</title>
+  <style type="text/css">
+    /* 定位版实现 */
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      /* 加上最小宽度时缩小时会保持最小宽度，当小于最小宽度时会出现滚动条 */
+      min-width: 600px;
+    }
+    #left{
+      /* 左边列绝对定位固定 */
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 500px;
+      background: lawngreen;
+    }
+    #right{
+      /* 右边列绝对定位固定 */
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 200px;
+      height: 500px;
+      background: lawngreen;
+    }
+    #middle{
+      height: 500px;
+      background: grey;
+      /* 将两边固定列排除出内容区 */
+      padding: 0 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="left"></div>
+  <div id="middle"></div>
+  <div id="right"></div>
+</body>
+</html>

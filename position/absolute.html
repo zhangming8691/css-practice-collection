@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>absolute</title>
+    <style type="text/css">
+      /* 1. 参照物
+            1. 如果有定位(任何一种定位)父级相对于该定位父级发生偏移
+            2. 没有定位父级则相对于整个文档发生偏移
+        2. 完全脱离文档流，不再占据原来位置，该空间消失
+        3. 父元素的浮动不会影响本元素的绝对定位
+        4. 元素 display 属性不变，表现为 inline-block
+        5. 内联元素也支持相对定位，display 转换为 block，表现为 inline-block
+      */
+
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .left{
+        /* float: left; */
+        width: 300px;
+        height: 200px;
+        background-color: #43A047;
+      }
+      .middle{
+        /* position: absolute;
+        left: 40px;
+        top: 40px; */
+        /* float: left; */
+        width: 400px;
+        height: 200px;
+        background-color: #388E3C;
+      }
+      .middle-inner-wrapper {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        width: 300px;
+        height: 150px;
+        background-color: #9E9D24;
+      }
+      .middle-inner{
+        /* position: absolute;
+        left: 40px;
+        top: 40px; */
+        /* float: left; */
+        width: 150px;
+        height: 100px;
+        background-color: #00BCD4;
+      }
+      .test-text{
+        /* position: absolute;
+        left: 40px;
+        top: 40px; */
+      }
+      .right{
+        /* position: relative; */
+        /* left: 20px;
+        top: -20px; */
+        width: 500px;
+        height: 200px;
+        background-color: #2E7D32;
+      }
+      .last{
+        width: 600px;
+        height: 200px;
+        background-color: #1B5E20;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- <div class="left">Left</div> -->
+      <div class="left">Left</div>
+      <div class="middle">
+        <div class="middle-inner-wrapper">
+          <div class="middle-inner">Middle-inner</div>
+          <span class="test-text">测试文字</span>
+        </div>
+      </div>
+      <div class="right">Right</div>
+      <div class="last">Last</div>
+    </div>
+  </body>
+</html>

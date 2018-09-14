@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>relative</title>
+    <style type="text/css">
+      /*
+      1. 相对于其自身默认位置定位
+          1. 其父元素/自身发生浮动，也是相对于自身定位
+          2. 父元素设置绝对定位，也是相对于自身定位
+      3. 不会脱离文档流，虽然元素发生位移，但其依然占据着原来的位置(跟着的元素不会位移)
+      4. 元素 display 属性不变，表现不变
+      5. 内联元素也支持相对定位，display 属性不变
+      */
+
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .left{
+        /* float: left; */
+        width: 300px;
+        height: 200px;
+        background-color: #039BE5;
+      }
+      .middle{
+        /* float: left; */
+        width: 400px;
+        height: 200px;
+        background-color: #0288D1;
+      }
+      .middle-inner-wrapper {
+        /* position: absolute;
+        left: 50px;
+        top: 50px; */
+        width: 300px;
+        height: 150px;
+        background-color: #00897B;
+      }
+      .middle-inner{
+        position: relative;
+        left: 20px;
+        top: 20px;
+        /* float: left; */
+        width: 150px;
+        height: 100px;
+        background-color: #00BCD4;
+      }
+      .test-text{
+        /* position: relative;
+        left: 20px;
+        top: 20px;
+        width: 200px;
+        height: 100px; */
+        /* inline 不变，宽高不可设置 */
+      }
+      .right{
+        /* position: relative; */
+        /* left: 20px;
+        top: -20px; */
+        width: 500px;
+        height: 200px;
+        background-color: #0277BD;
+      }
+      .last{
+        width: 600px;
+        height: 200px;
+        background-color: #01579B;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left">Left</div>
+      <div class="middle">
+        <div class="middle-inner-wrapper">
+          <div class="middle-inner">Middle-inner</div>
+          <span class="test-text">测试文字</span>
+        </div>
+      </div>
+      <div class="right">Right</div>
+      <div class="last">Last</div>
+    </div>
+  </body>
+</html>

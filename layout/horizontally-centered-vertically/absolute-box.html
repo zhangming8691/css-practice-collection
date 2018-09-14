@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位&盒模型</title>
+    <style type="text/css">
+      /* 方法2:长宽明确，利用绝对定位 & 盒模型 */
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #center{
+        width: 300px;
+        height: 200px;
+        background-color: #2196f3;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="center">
+      元素水平垂直居中
+      <br />
+      绝对定位 & 盒模型
+    </div>
+  </body>
+</html>

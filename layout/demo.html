@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+      /* 方法3:长宽不明确，CSS弹性盒子/Flex布局 */
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        /* display: flex; */
+        height: 600px;
+        /* vertical-align: middle; */
+      }
+      .test{
+        width: 300px;
+        line-height: 600px;
+        /* display: inline-block; */
+      }
+      #center{
+        width: 300px;
+        height: 200px;
+        background-color: #2196f3;
+      }
+      .span-a{
+        display: inline-block;
+        width: 400px;
+        height: 30px;
+        background-color: aqua;
+        margin: 10px 20px;
+        /* margin-bottom: 10px; */
+        /* padding: 10px 20px; */
+        /* padding-bottom: 10px; */
+      }
+      .span-b{
+        display: inline-block;
+        width: 400px;
+        height: 30px;
+        background-color:rgb(245, 185, 96);
+      }
+      .horizontal-center {
+        width: 200px;
+        height: 100px;
+        /* text-align: center; */
+        background-color: bisque;
+        /* margin: 0 auto; */
+
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+      }
+      .span-c{
+        display: inline-block;
+        /* width: 200px; */
+        /* height: 30px; */
+        background-color: aqua;
+        /* margin: 10px 20px; */
+        /* margin-bottom: 10px; */
+        margin-left: 20px;
+        /* padding: 10px 20px; */
+        /* padding-bottom: 10px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- <div id="center">
+        元素水平垂直居中
+        <br />
+        Flex 布局
+      </div> -->
+      <span class="test">此时是行内元素</span>
+    </div>
+    <div class="">行内元素特点A</div>
+    <div class="span-b">B行内元素特点</div>
+    <div class="span-b">B行内元素特点</div>
+    <div class="horizontal-center">
+      <span class="span-c">行内元素</span>
+    </div>
+  </body>
+</html>
